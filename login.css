@@ -1,0 +1,595 @@
+body {
+	padding: 0;
+	margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color:rgb(101, 94, 94);
+}
+nav .logo {
+	float: left;
+	width: 20%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: rgb(101, 94, 84);
+    padding: 0.2% 0;
+}
+.logo img{
+    width:40%;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-top: 17px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1e1d1d;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 915px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+    .search-container, .search-bar, .search-button{
+        display: none
+        ;
+    }
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(83, 79, 79, 0.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+}
+
+
+
+.search-container {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex: 1;
+    
+}
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+    margin-right: 10px;
+}
+  
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.search-button:hover {
+    background-color:#2a3642;
+}
+
+
+.donations-header h1{
+    color: rgb(15, 107, 160);
+    margin-left: 15%;
+    margin-top: 8rem;
+    margin-bottom: 5%;
+    margin-right: 15%;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.donations-header h1::before, .donations-header h1::after{
+    content: "";
+    height: 3px;
+    background-color: #1eb2b8;
+    display: block;
+}
+
+.donations{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(./donate\ bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*donation type selecting section*/
+
+.donation-type{
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    padding-top: 10px;
+    color: white;
+   
+}
+
+.donation-type h2{
+    text-align: center;
+    color: white;
+}
+
+.price-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    justify-content: center;
+    justify-content: space-between;
+    
+}
+
+.price-column{
+    border:3px solid #1eb1e2;
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+}
+
+.price-column p{
+    text-align: center;
+}
+
+.price-column h3{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+
+
+.price-column ul li{
+    line-height: 70px;
+    margin-left: -5%;
+    font-size: 14px;
+}
+
+.price-column ul li::before{
+    content: '\2022';
+    color: red;
+    margin-right: 15px;
+}
+
+.price-column ul #g::before{
+    content:'\2022' ;
+    color: greenyellow;
+    
+}
+
+.price-column button{
+    color: white;
+    background: rgba(183, 183, 183, 0.47);
+    border: 2px solid rgb(22, 22, 22);
+    padding: 5px;
+    cursor: pointer;
+    transition: .4s ease-in;
+   
+}
+
+.price-column button:hover{
+    background-color: #25649c;
+}
+
+
+/*start of login form*/
+
+.d-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+	margin-left: 34%;
+}
+.d-container{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+.spn{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.d-header{
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.input-field .input{
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+}
+#i{
+    
+    max-width: 1.25rem;
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: #fff;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: black;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    background-color: #1eb1e2;
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+}
+.lbl a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+@media(max-width: 820px){
+
+    .pcover-content{
+        font-size: 2rem;
+        margin-top: 85%;
+        margin-bottom: 90%;
+    }
+
+    .purchase-gallery-heading{
+        margin-bottom: 10%;
+    }
+
+    .gallery{
+        display: grid;
+        grid-gap: 10px;
+        justify-content: space-between;
+        
+    }
+
+    .final-purchase{
+        margin-bottom: 15%;
+    }
+
+    .gallery img{
+        margin-top: 1rem;
+    }
+
+    .p-content{
+        max-width: 100%;
+        height: 100%;
+        margin-bottom: 40%;
+    }
+
+    .p-content ul{
+        padding-bottom: 4rem;
+    }
+
+    .purchase{
+        margin-top: -20%;
+        margin-bottom: 10%;
+    }
+
+    hr{
+        margin-top: 15%;
+    }
+
+    .donations{
+        height: 250%;
+        
+    }
+
+    .price-row{
+        justify-content: center;
+        display: grid;
+        grid-gap: 4%;
+    }
+
+    .d-box{
+        margin-top: 15%;
+        
+    }
+
+    .price-column{
+        height: 300px;
+    }
+
+    .price-column p{
+        font-size: smaller;
+    }
+
+    .price-column h3{
+        font-size: 19px;
+    }
+
+    .price-column ul li{
+        justify-content: center;
+        font-size: 10px;
+        line-height: 30px;
+    }
+    
+    
+
+
+}
+
+/*end of purchase and donate page*/
+/*footer*/
+
+.footer{
+    width: 100%;
+    height: 350px;
+    bottom: 0;
+    background: linear-gradient(to right,#3d3d3e18,#a2a2a3);
+    color: #454545;
+    padding: 2px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+    position:fix;
+    }
+    #footer-toggle{
+        position: absolute;
+        bottom: 1000px;
+    }
+    .row{
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    
+    .col {
+      flex-basis: 20%;
+      padding: 10px;
+      
+    }
+    
+    .com h3{
+      width: fit-content;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .email-id{
+      width:fit-content ;
+      border-bottom: 1px solid #545454;
+      margin: 20px 0;
+    }
+    ul li{
+      list-style: none;
+      margin-bottom: 12px;
+    }
+    ul li:hover{
+      text-decoration: underline;
+      transform: scale(1.1);
+    }
+    ul li a{
+      text-decoration: none;
+      color: #0d0d0d;
+    }
+    form{
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    
+      margin-bottom: 50px;
+    }
+    form.far{
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    form input{
+      width: 100%;
+      background: transparent;
+      color: #ccc;
+      border: 0;
+      outline: none;
+    }
+    form button{
+      background: transparent;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    form button.fas{
+      font-size: 16px;
+      color:#ccc ;
+    }
+    .social-icons .fab{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      color:#000 ;
+      background: #ffffff;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    hr{
+     width: 90%;
+     border: 0;
+     border-bottom: 1px solid #121111;
+     margin: 20px auto; 
+    }
+    .copyright{
+      text-align: center;
+      
+    }
+    .underline{
+      width: 15%;
+      height: 5px;
+      background: #767676;
+      border-radius: 3px;
+      top: 25px;
+      left: 0;
+    }
+    .office{
+      width: 1px;
+      height: 260px;
+      background-color: #181717;
+      margin: 0 10px;
+    }
+    .fas {
+     color: #2a2929;
+    }
+    .social-icons :hover{
+      color: #ffffff;
+      background-color: #000;
+      transform: scale(1.5);
+    }
+    .payment-methodes {
+     font-size: 30px;
+    padding-top: 40px;
+    } 
