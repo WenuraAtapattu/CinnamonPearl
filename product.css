@@ -480,61 +480,7 @@ main {
         .cart-icon:hover {
             color:#ff6d00;
         }
-        /* CSS for the table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px; 
-            font-size: 20px;
-            
-        
-        }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold; 
-        }
-        .tr, td {
-            text-align: center;
-        }
-        /*css for the the paragraphs*/
-        
-        .p1{
-            font-size: 30px;
-            font-family: cursive;
-            text-align: justify;
-        }
-        .p2{
-            font-size: 30px;
-            font-family: cursive;
-            text-align: justify;
-        }
-        .im1{
-            height: 500px;;
-            width: 50%;
-        }
-        .Colombo-branch h3{
-            padding-top: 200px;
-            text-align: center;
-            font-size: 40px;
-        }
-          
-        .im2{
-            height: 480px;;
-            width: 50%;  
-        }
-        .Kandy-branch{
-            padding-top: 200px;
-            text-align: center;
-            font-size: 40px; 
-        }
-      
+       
         
         .footer{
             width: 100%;
