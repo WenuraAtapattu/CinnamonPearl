@@ -202,7 +202,22 @@ nav .icon-burger .line {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
-
+.order-link {
+        display: block;
+        width: 200px;
+        margin: 30px auto;
+        padding: 10px 20px;
+        text-align: center;
+        background: #28a745;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    
+    .order-link:hover {
+        background: #218838;
+    }
 .abc {
     display: flex;
     justify-content: center;
@@ -670,7 +685,22 @@ footer section {
       
       /* Change the background color of the dropdown button when the dropdown content is shown */
       .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    .order-link {
+        display: block;
+        width: 200px;
+        margin: 30px auto;
+        padding: 10px 20px;
+        text-align: center;
+        background: #28a745;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
     
+    .order-link:hover {
+        background: #218838;
+    }
     .abc {
         display: flex;
         justify-content: center;
