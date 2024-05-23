@@ -428,7 +428,7 @@ main {
      font-size: 30px;
     padding-top: 40px;
     }    
-    @media screen and (max-width:539px){
+    @media screen and (c){
         .abc {
             display: flex;
             justify-content: center;
